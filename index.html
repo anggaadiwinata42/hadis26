@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platform Studi Hadis Digital</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #f4f6f9; display: flex; flex-direction: column; height: 100vh; overflow: hidden; }
+        header { background: linear-gradient(135deg, #1e3c72, #2a5298); color: #fff; padding: 15px 20px; display: flex; align-items: center; justify-content: space-between; box-shadow: 0 4px 6px rgba(0,0,0,0.1); z-index: 100; }
+        .app-title { font-size: 1.2rem; font-weight: bold; letter-spacing: 0.5px; }
+        nav { display: flex; gap: 15px; }
+        .nav-btn { background-color: #3a7bd5; color: white; padding: 10px 15px; font-size: 0.95rem; border: none; border-radius: 4px; cursor: pointer; text-decoration: none; display: inline-block; transition: background 0.3s ease; }
+        .nav-btn:hover { background-color: #2a6bb5; }
+        .dropdown { position: relative; display: inline-block; }
+        .dropdown-content { display: none; position: absolute; right: 0; background-color: #ffffff; min-width: 340px; max-height: 80vh; overflow-y: auto; box-shadow: 0px 8px 16px rgba(0,0,0,0.15); border-radius: 4px; z-index: 200; }
+        .dropdown-content .menu-group-header { background-color: #0f172a; color: #ffffff; padding: 12px 15px; font-weight: bold; font-size: 1rem; display: block; text-align: center; letter-spacing: 0.5px; }
+        .dropdown-content .heading-1 { background-color: #f1f5f9; color: #1e3c72; padding: 10px 15px; font-weight: bold; font-size: 0.95rem; border-bottom: 1px solid #cbd5e1; display: block; text-decoration: none; }
+        .dropdown-content .heading-1:hover { background-color: #e2e8f0; }
+        .dropdown-content .heading-2 { color: #334155; padding: 8px 15px 8px 30px; text-decoration: none; display: block; font-size: 0.88rem; border-bottom: 1px solid #f1f5f9; transition: background 0.2s, color 0.2s; }
+        .dropdown-content .heading-2:hover { background-color: #f8fafc; color: #3a7bd5; }
+        .dropdown-content .pdf-link { color: #334155; padding: 12px 20px; text-decoration: none; display: block; font-size: 0.92rem; border-bottom: 1px solid #e2e8f0; transition: background 0.2s; }
+        .dropdown-content .pdf-link:hover { background-color: #f0fdf4; color: #16a34a; font-weight: 500; }
+        .dropdown:hover .dropdown-content { display: block; }
+        .iframe-container { flex: 1; width: 100%; height: 100%; border: none; }
+        iframe { width: 100%; height: 100%; border: none; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="app-title">HADIS DIGITAL </div>
+        <nav>
+            <a href="homepage.html" target="konten-buku" class="nav-btn" style="background-color: #475569;">Halaman Utama (Cover)</a>
+            
+            <div class="dropdown">
+                <button class="nav-btn" style="background-color: #0284c7;">E-Book ▾</button>
+                <div class="dropdown-content">
+                    <div class="menu-group-header">E-BOOK ZUHUD</div>
+                    <a href="bab1.html" target="konten-buku" class="heading-1">BAB I: Praktik Zuhud & Relevansinya</a>
+                    <a href="bab1.html#sub-a" target="konten-buku" class="heading-2">&bull; A. Sikap Hati Bukan Meninggalkan Dunia</a>
+                    <a href="bab1.html#sub-b" target="konten-buku" class="heading-2">&bull; B. Kesederhanaan Hidup Nabi SAW</a>
+                    <a href="bab1.html#sub-c" target="konten-buku" class="heading-2">&bull; C. Pengelolaan Harta</a>
+                    <a href="bab1.html#sub-d" target="konten-buku" class="heading-2">&bull; D. Orientasi Tujuan Hidup</a>
+                    <a href="bab1.html#sub-e" target="konten-buku" class="heading-2">&bull; E. Pengendalian Keinginan & Akhirat</a>
+                    
+                    <a href="bab2.html" target="konten-buku" class="heading-1">BAB II: Penerapan Nilai Zuhud</a>
+                    <a href="bab2.html#sub-a" target="konten-buku" class="heading-2">&bull; A. Penerapan Melalui Qana'ah</a>
+                    <a href="bab2.html#sub-b" target="konten-buku" class="heading-2">&bull; B. Pola Konsumsi</a>
+                    <a href="bab2.html#sub-c" target="konten-buku" class="heading-2">&bull; C. Teknologi dan Media Sosial</a>
+                    <a href="bab2.html#sub-d" target="konten-buku" class="heading-2">&bull; D. Pekerjaan dan Karier</a>
+                    <a href="bab2.html#sub-e" target="konten-buku" class="heading-2">&bull; E. Pengelolaan Waktu & Prioritas</a>
+                    
+                    <a href="bab3.html" target="konten-buku" class="heading-1">BAB III: Tantangan Praktik Zuhud</a>
+                    <a href="bab3.html#sub-a" target="konten-buku" class="heading-2">&bull; A. Budaya Materialisme & Konsumerisme</a>
+                    <a href="bab3.html#sub-b" target="konten-buku" class="heading-2">&bull; B. Tekanan Sosial Standar Modern</a>
+                    <a href="bab3.html#sub-c" target="konten-buku" class="heading-2">&bull; C. Ketergantungan Berlebihan pada Harta</a>
+                    <a href="bab3.html#sub-d" target="konten-buku" class="heading-2">&bull; D. Lemahnya Kesadaran Spiritual</a>
+                    <a href="bab3.html#sub-e" target="konten-buku" class="heading-2">&bull; E. Distraksi Teknologi Digital</a>
+
+                    <a href="lainnya.html" target="konten-buku" class="heading-1">Informasi Pendukung</a>
+                    <a href="lainnya.html#pustaka" target="konten-buku" class="heading-2">&bull; Daftar Pustaka</a>
+                    <a href="lainnya.html#glosarium" target="konten-buku" class="heading-2">&bull; Glosarium</a>
+                    <a href="lainnya.html#profil-penulis" target="konten-buku" class="heading-2">&bull; Profil Penulis</a>
+                    <a href="lainnya.html#profil-editor" target="konten-buku" class="heading-2">&bull; Profil Editor</a>
+                    <a href="lainnya.html#sinopsis" target="konten-buku" class="heading-2">&bull; Sinopsis Buku</a>
+                </div>
+            </div>
+            
+            <div class="dropdown">
+                <button class="nav-btn" style="background-color: #16a34a;">Review PDF ▾</button>
+                <div class="dropdown-content">
+                    <div class="menu-group-header" style="background-color: #14532d;">REVIEW MEDIA DIGITAL HADIS</div>
+                    <a href="251305009_review_website_1.pdf" target="konten-buku" class="pdf-link">📄 1. Review Website HadithHub</a>
+                    <a href="251305009_review_website_%202.pdf" target="konten-buku" class="pdf-link">📄 2. Review Website Alminasa.ai</a>
+                    <a href="251305009_review_website_3.pdf" target="konten-buku" class="pdf-link">📄 3. Review Website Sunnah.com</a>
+                    <a href="251305009_review_desktop.pdf" target="konten-buku" class="pdf-link">📄 4. Review Aplikasi Desktop Mausu'ah</a>
+                    <a href="251305009_review_apk_android.pdf" target="konten-buku" class="pdf-link">📄 5. Review Aplikasi Android Hadisku</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="iframe-container">
+        <iframe src="homepage.html" name="konten-buku"></iframe>
+    </div>
+</body>
+</html>
